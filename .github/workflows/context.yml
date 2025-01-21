@@ -5,4 +5,4 @@ jobs:
     runs-on: Ubuntu-latest
     steps:
       - name: print
-        run: echo "${{github}}"
+        run: echo "${{ toJSON(github) }}"
