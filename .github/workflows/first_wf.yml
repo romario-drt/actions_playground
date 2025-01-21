@@ -6,5 +6,7 @@ jobs:
     steps:
       - name: greeter
         run: echo "hello my friend"
-      - name: farewell
-        run: echo "goodbye
+      - name: multiline
+        run: |
+          echo "Hi im line one"
+          echo "Hi im line two"
