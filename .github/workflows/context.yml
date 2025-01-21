@@ -1,0 +1,8 @@
+name: Printing Context
+on: [workflow_dispatch]
+jobs:
+  print:
+    runs-on: Ubuntu-latest
+    steps:
+      - name: print
+        run: echo "${{github}}"
