@@ -2,7 +2,7 @@ name: first-workflow
 on: [workflow_dispatch]
 jobs:
   first-job:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
     steps:
       - name: greeter
         run: echo "hello my friend"
