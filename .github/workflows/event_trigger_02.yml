@@ -1,0 +1,25 @@
+#A deeper dive into event triggers.
+name: Event trigger Deep dive
+on:
+  pull_request:
+    types: opened
+    branches: 
+      - main
+      - feat-*
+      - feature/**
+jobs:
+  deploy:
+    runs-on: Ubunto-latest
+    steps:
+      - name: Output Event data
+        run: echo "${{ toJSON(github.event) }}"
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Test project
+        run: npm run test
+      - name: Build project
+        run: npm run build
+      - name: Deploy project
+        run: echo "Deployment...."
