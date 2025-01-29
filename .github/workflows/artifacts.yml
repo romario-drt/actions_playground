@@ -40,6 +40,8 @@ jobs:
           name: content
       - name: Output artifacts
         run: ls
+      - name: Output filename
+        run: echo "${{ needs.build.script-file }}"
       - name: Deploy
         run: echo "deploying..."
   
